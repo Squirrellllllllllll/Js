@@ -145,3 +145,57 @@ notHell(1)
     .then(function (value) {
         console.log(value + 1);
     });
+
+/* 6. Resolve & Reject trong promise
+    - Khi gặp reject hàm sẽ chuyển sang .catch chứ k tiếp tục chạy tiếp
+*/
+
+function sleep(ms) {
+    return new Promise2((resolve) => {
+            setTimeout(resolve, ms)
+        })
+}
+    
+sleep(1000)
+    .then(function () {
+        console.log(1);
+        return sleep(1000);
+    })
+    .then(function () {
+        console.log(2);
+        return sleep(1000);
+    })
+    .then(function () {
+        console.log(3);
+        return sleep(1000);
+    })
+    .then(function () {
+        console.log(4);
+        return sleep(1000);
+    })
+    // Luôn luôn có catch trong promise
+    .catch((err) => {
+        console.log(err);
+    })
+
+//      a. Promise.resolve
+//      b. Promise.reject
+
+// Library: Output always is promise
+
+let promise3 = Promise.resolve("Success!");
+let promise4 = Promise.reject("Error!");
+
+promise3
+    .then((result) => {
+        console.log("result", result);
+    })
+    .catch((err) => {
+        console.log("Error", err);
+    })
+
+//      c. Promise.all
+let promise5 = Promise.all([promiseA, promiseB])
+    .then((result) => {
+        console.log(result)
+    })
