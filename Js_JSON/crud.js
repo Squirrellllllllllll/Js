@@ -21,6 +21,9 @@ function getCourse(callback) {
 function createCourse(data, callback) {
     let options = {
         method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
         body: JSON.stringify(data)
     }
 
@@ -31,17 +34,39 @@ function createCourse(data, callback) {
         .then(callback)
 }
 
+function handleDeleteCourse(id) {
+    let options = {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    }
+
+    fetch(courseAPI + '/' + id, options)
+        .then((response) => {
+        response.json()
+        })
+        .then(() => {
+            let courseItem = document.querySelector(".course-item-" + id)
+            if (courseItem) {
+                courseItem.remove()
+            }
+        })
+}
+
 function renderCourse(courses) {
     let listCourseBlock = document.querySelector("#list-course")
-    let htmls = courses.map((course) => {
+    let renders = courses.map((course) => {
         return `
-            <li>
+            <li class="course-item-${course.id}">
                 <h4>${course.name}</h4>
                 <p>${course.description}</p>
+                <button onClick="handleDeleteCourse(${course.id})">Delete</button>
             </li>
             `
     })
-    listCourseBlock.innerHTML = htmls.join('')
+    listCourseBlock.innerHTML = renders.join('')
 }
 
 function handleCreateForm() {
@@ -55,6 +80,8 @@ function handleCreateForm() {
             description: description
         }
 
-        createCourse(formData)
+        createCourse(formData, () => {
+            getCourse(renderCourse)
+        });
     }
 }

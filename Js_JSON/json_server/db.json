@@ -1,24 +1,21 @@
 {
-  "course": [
-    {
-      "id": "1",
-      "name": "Basic Programming",
-      "description": "Introduction for newbie"
+  "courses": [
+    { 
+      "id": 1,
+      "name": "Course 1",
+      "description": "Test 1" 
     },
-    {
-      "id": "2",
-      "name": "Responsive",
-      "description": "Responsive for newbie"
+
+    { 
+      "id": 2,
+      "name": "Course 2",
+      "description": "Test 2" 
     },
-    {
-      "id": "3",
-      "name": "Javascript",
-      "description": "Responsive for newbie"
-    },
-    {
-      "name": "Test",
-      "description": "Test Postman POST",
-      "id": "05a0"
+    
+    { 
+      "id": 3,
+      "name": "Course 3",
+      "description": "Test 3" 
     }
   ]
 }
