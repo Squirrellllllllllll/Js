@@ -1,0 +1,19 @@
+I. Có 3 cách copy object trong javascript
+
+# Cách 1: Object.assign()
+
+Shallow copying
+
+# Cách 2: Spread Operator Es6
+
+Shallow copying
+
+# Cách 3: JSON.parse(JSON.stringify())
+
+Deep copying
+
+II. Shallow Copying
+Chỉ copy những giá trị nông (lớp đầu tiên của object), những lớp sau sẽ vẫn sử dụng tham chiếu của đối tượng ban đầu.
+
+III. Deep Copying
+Copy tất cả các lớp của obj, tham chiếu của obj cũ không còn ảnh hưởng đến object mới.

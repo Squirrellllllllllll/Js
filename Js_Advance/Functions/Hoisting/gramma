@@ -1,0 +1,16 @@
+# Một chút về function declarations & expressions
+
+- function declarations là function khai báo bthg
+
+- function expressions là func khai báo bằng 1 biến tạm
+
+# Func declarations được hoisting còn expressions thì không.
+
+# Khái niệm Hoisting
+
+Hoisting là hành vi mặc định của Js về việc di chuyển các khai báo lên đầu để compliled hay thực thi code của ban.
+
+# Lưu ý cách hoạt động
+
+Trước khi thực thi code, các hàm(function declarations) trong file Js sẽ được đẩy lên đầu. (Nhưng expression thì không).
+Vì vậy nên ta có thể sử dụng dc hàm trc khi dòng code gọi hàm

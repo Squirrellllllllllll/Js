@@ -1,0 +1,8 @@
+# Khái niệm
+Higher Order Function (HOF) là hàm lấy các hàm khác làm đối số hoặc trả về các hàm làm kết quả của chúng: callback()
+
+# Sức mạnh của HOF
+Thay vì sử dụng đoạn logic dài
+Chúng ta nên chia nhỏ thành các func nhỏ
+Sau đó kết hợp chúng để sử lý bài toán
+=> Giảm lỗi và dễ đọc hiểu code hơn

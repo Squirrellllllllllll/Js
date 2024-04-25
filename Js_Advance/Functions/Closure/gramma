@@ -1,0 +1,3 @@
+# Closure là một chức năng có quyền truy cập vào phạm vi của thành phần cha, ngay cả khi scope đã đóng
+
+# Có thể sử dụng để xác định biến private.

@@ -1,0 +1,12 @@
+# Khái niệm
+- Currying là một kỹ thuật đánh giá function với multiple arguments (các đối số), 
+  thành một chuỗi hàm với single argument (một đối số) duy nhất.
+
+- Thay vì lấy tất cả đối số cùng 1 lúc, nó lấy hàm thứ nhất và trả về, 
+  lấy hàm thứ 2 và trả về,
+  lấy hàm thứ 3 và trả về, ...
+
+
+# Currying cho phép cấu hình một chức năng có thể tái sử dụng
+- Ví dụ khi có 2 obj mà muốn lấy id của 1 thành phần, thay vì lặp lại việc get id 2 lần
+  Chúng ta có thể sử dụng currying để tạo ra 1 chức năng sd cho cả 2 obj

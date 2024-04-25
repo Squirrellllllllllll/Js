@@ -1,0 +1,9 @@
+# I. Khái niệm Stack
+
+Stack là cơ chế FILO(Last in first out). Trong đó các dữ liệu được bảo tồn tính trật tự
+
+Thường sử dụng với push, pop, peek
+
+# II. Khái niệm Queue
+
+Queue là cơ chế FIFO(First in first out).

@@ -1,0 +1,3 @@
+# Khái niệm
+
+- Generator function là 1 hàm có khả năng tạm ngưng thực thi trước khi hàm kết thúc, và nó có thể chạy ở 1 thời điểm khác.

@@ -1,0 +1,12 @@
+# Khái niệm
+Scope là vùng hoạt động của biến
+
+Có 3 loại scope trong JS
+ + Global scope: Biến toàn cục, đứng ngoài scope, hoạt động trong toàn bộ Scope
+ + Local scope (function): Biến trong func, hoạt động trong hàm, không thể gọi được ở bên ngoài hàm
+ + Block scope: Biến chỉ hoạt động được trong cặp dấu {}
+
+
+Có 3 cách khai báo biến
+ + var: function scope
+ + const, let: block scope

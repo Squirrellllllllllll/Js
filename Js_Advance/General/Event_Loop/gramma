@@ -1,0 +1,36 @@
+# Khái niệm
+
+Event loop có 3 phần:
+
+Call stack
+Web APIs
+Callback Queue
+
+# I. Call stack
+
+- Mỗi chương trình Js có 1 call stack
+- Tại 1 thời điểm chỉ có 1 sự kiện được thực thi
+- Sau khi thực thi, sự kiện sẽ được xóa khỏi call stack
+- Call stack là nơi các lệnh chờ được thực thi
+- Tuân thủ theo LIFO (Last in first out)
+
+# II. Web APIs
+
+- Cho phép thực hiện nhiều sự kiện trong cùng 1 thời điểm.
+- Giúp thực thi đa luồng nhiều tasks
+- Giúp call stack không bị tắc
+
+# III. Callback Queue
+
+- Hàm đợi là nơi các hàm được gọi lại sau khi được thực hiện và đẩy lên từ Web APIs
+
+## Event Loop
+
+- Step 1: Kiểm tra call stack có trống hay không
+- Step 2: Sự kiện được đưa vào call stack
+- Step 2a: Sau khi được thực hiện, sự kiện xóa khỏi call stack
+- Step 2b: Sự kiện sẽ gọi luồng bất đồng bộ đến Web APIs, lưu trên đó và xóa ở call stack
+- Step 2c: Khi đó các sự kiện tiếp theo sẽ được gọi tiếp vào call stack
+- Step 3: Sự kiện sau khi được thực hiện ở Web APIs sẽ lưu vào Callback Queue
+- Step 4: Kiểm tra nếu call stack đang trống, push sự kiện ở Callback Queue vào Call stack
+- Step 5: thực hiện và xóa sự kiện ở call stack

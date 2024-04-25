@@ -1,0 +1,43 @@
+# Out Line
+
+1. Callback
+2. Promise
+3. Promise API
+4. Async/Await
+
+# 1. Callback
+
+- Hàm gọi lại chính nó
+
+# 2. Promise
+
+- Là một special Js object giúp thực thi các func khác và trả về để xử lý nhiều công đoạn.
+- Giúp chạy đồng bộ (Vì Js là bất đồng bộ)
+- Có 3 trạng thái:
+  - Pending: Chờ
+  - Fulfilled: Đồng ý
+  - Rejected: Từ chối
+- Có 3 phần:
+  - .then
+  - .catch
+  - .finally
+
+## setTimeout(): Thực hiện 1 lần
+
+## setInterval(): Thực hiện theo chu kỳ
+
+# 3. Async/Await
+
+- Là 1 tính năng Js giúp làm việc vs bất đồng bộ thú vị hơn, tương thích với tất cả APIs dựa trên Promise hiện có
+- Có 2 phần: try - catch
+
+# 3.a. Async - Khai báo
+
+- Tự động chuyển 1 func thành 1 promise
+- Cho phép sử dụng await
+
+# 3.b. Await
+
+- Tạm dừng thực thi các chức năng không đồng bộ
+- Chỉ hoạt động khi có khai báo async
+- Chỉ hoạt động với Promise chứ không hd vs func có callback
